@@ -1,0 +1,4 @@
+table: dino
+------
+name: TEXT
+type: TEXTc
