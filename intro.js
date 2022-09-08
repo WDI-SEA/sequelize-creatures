@@ -13,8 +13,8 @@ const dinoCRUD = async () => {
         //     type: 'Carnivore'
         // })
         // console.log(newDino)
-        //----------------------------------------------------------------
-        // READ
+        // //----------------------------------------------------------------
+        // // READ
         // const allDinos = await db.dino.findAll() // find all dinos
         // const someDinos = await db.dino.findAll({
         //     where: {
@@ -35,8 +35,8 @@ const dinoCRUD = async () => {
 
         // console.log(dino)
         // console.log(`the dino was created: ${created}`)
-        //--------------------------------------------------------------------
-        // UPDATE
+        // //--------------------------------------------------------------------
+        // // UPDATE
         // // updates return the number of rows that were changed
         // // db.model.update({ what to change }, { where: { where clause } })
         // const numRowsChanged = await db.dino.update({ type: 'Super Carnivore' }, {
@@ -45,8 +45,8 @@ const dinoCRUD = async () => {
         //     }
         // })
         // console.log(numRowsChanged)
-        //--------------------------------------------------------------------
-        // DESTROY
+        // //--------------------------------------------------------------------
+        // // DESTROY
         // const numRowsDeleted = await db.dino.destroy({
         //     where: {
         //         name: 'T-Rex'
@@ -62,17 +62,58 @@ const dinoCRUD = async () => {
 // dinoCRUD()
 
 
-// const creatureCRUD = async () => {
-//     try {
-//         // CREATE
-//         // READ
-//         // UPDATE
-//         // DESTROY
+const creatureCRUD = async () => {
+    try {
+        // // CREATE
+        // const newCreature = await db.creature.create({
+        //     img_url: 'insert img url',
+        //     type: 'Mammoth'
+        // })
+        // console.log(newCreature)
+        // //------------------------------------------------------------------
+        // // READ
+        // const allCreatures = await db.creature.findAll() // find all creatures
+        // const someCreatures = await db.creature.findAll({
+        //     where: {
+        //         type: 'Mammoth'
+        //     }
+        // })
+        // console.log(allCreatures)
+        // console.log(someCreatures)
+        // const [creature, created] = await db.creature.findOrCreate({
+        //     where: {
+        //         type: 'Mammoth'
+        //     },
+        //     defaults: {
+        //         img_url: 'insert img url',
+        //         type: 'Mammoth'
+        //     }
+        // })
+        // console.log(creature)
+        // console.log(`the dino was created: ${created}`)
+        // //------------------------------------------------------------------
+        // // UPDATE
+        // // updates return the number of rows that were changed
+        // // db.model.update({ what to change }, { where: { where clause } })
+        // const numRowsChanged = await db.creature.update({ type: 'Mega Mammoth' }, {
+        //     where: {
+        //         img_url: 'insert img url'
+        //     }
+        // })
+        // console.log(numRowsChanged)
+        // //------------------------------------------------------------------
+        // // DESTROY
+        // const numRowsDeleted = await db.creature.destroy({
+        //     where: {
+        //         type: 'Mammoth'
+        //     }
+        // })
+        // console.log(numRowsDeleted)
 
-//     } catch(err) {
-//         console.warn(err)
-//     }
-// }
+    } catch(err) {
+        console.warn(err)
+    }
+}
 
 // // don't forget to invoke!
 // creatureCRUD()
