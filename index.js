@@ -1,4 +1,5 @@
 const db = require("./models")
+const {Op} = require("sequelize") //query operator
 
 const dinoCRUD = async () => {
     try {
@@ -44,6 +45,16 @@ const dinoCRUD = async () => {
         //     }
         // })
         // console.log(numRowsDeleted)
+            //using {Op}
+        
+        // const dinoSearch = await db.dino.findAll({
+        //     where: {
+        //         name: {
+        //             [Op.like] : "Li%"
+        //         }
+        //     }
+        // })
+        // console.log(dinoSearch)
 
     } catch (err) {
         console.warn(err)
