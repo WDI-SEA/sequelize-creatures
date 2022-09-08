@@ -1,0 +1,19 @@
+table: dinos
+--------------
+name: TEXT
+type: TEXT
+
+
+NOTE: generate models with a singular name (no s on the end)
+
+sequelize model:create --name dino --attributes name:string,type:string
+
+table: creatures
+--------------
+type: TEXT
+img_url: TEXT
+
+
+NOTE: generate models with a singular name (no s on the end)
+
+sequelize model:create --name creature --attributes type:string,img_url:string
