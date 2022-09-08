@@ -1,0 +1,2 @@
+sequelize model:create --name dino --attributes id:integer,name:string,type:string
+sequelize model:create --name creature --attributes id:integer,img_url:string,type:string
