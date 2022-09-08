@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   dino.init({
-    id: DataTypes.INTEGER,
+    dinoID: DataTypes.INTEGER,
     name: DataTypes.STRING,
     type: DataTypes.STRING
   }, {

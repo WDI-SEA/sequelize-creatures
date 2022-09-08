@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   creature.init({
-    id: DataTypes.INTEGER,
+    creatureID: DataTypes.INTEGER,
     img_url: DataTypes.STRING,
     type: DataTypes.STRING
   }, {
