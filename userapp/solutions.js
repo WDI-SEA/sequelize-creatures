@@ -6,33 +6,33 @@ const dinosaurCrud = async () => {
     try {
 
         // CREATE
-        // const newDino = await db.dino.create({
+        // const newDinosaur = await db.dinosaur.create({
         //     name:'Sarah'
         //     type: 'Parasaurolophus'
         // })
-        // const newDino = await db.dino.create ({
+        // const newDinosaur = await db.dinosaur.create ({
         //     name: 'Tiny'
         //     type: 'Titanosaurus'
         // })
         // READ
-        // const allDinos = await db.dino.findAll()
-        // console.log(allDinos)
+        // const allDinosaur = await db.dinosaur.findAll()
+        // console.log(allDinosaur)
 
-        // const oneDino = await db.dino.findAll({
+        // const oneDinosaur = await db.dinosaur.findAll({
         //     where: {
         //         type: 'Parasaurolophus'
         //     }
         // })
-        // console.log(oneDino)
+        // console.log(oneDinosaur)
         // UPDATE
-        // const tinyUpdate = await db.dino.update({name: 'Big tiny'}, {
+        // const tinyUpdate = await db.dinosaur.update({name: 'Big tiny'}, {
         //     where: {
         //         name: 'Big Tiny'
         //     }
         // })
         // console.log(tinyUpdate)
         // DELETE
-        // const dinoDeletus = await db.dino.destroy ({
+        // const dinoDeletus = await db.dinosaur.destroy ({
         //     where: {
         //         name: 'Sarah'
         //     }
@@ -48,15 +48,40 @@ const dinosaurCrud = async () => {
 const creatureCrud = async () => {
     try {
  //CREATE
-const addCreature = await db.creature.create ({
-    name: 'Happy'
-    type: 'Harpia'
-}) 
-const newCreature = await db.creature.create ({
-    name: 'Taylor'
-    type: 'Minotaur'
-})
+// const addCreature = await db.creature.create ({
+//     name: 'Happy'
+//     type: 'Harpia'
+// }) 
+// const newCreature = await db.creature.create ({
+//     name: 'Taylor'
+//     type: 'Minotaur'
+// })
+// READ
+// const allCreatures = await db.creatures.findAll()
+// console.log(allCreatures)
+// const oneCreature = await db.creature.findAll ({
+//     where:  {
+//         name: 'Happy'
+//     }
+// })
+//   console.log(oneCreature)     
+// UPDATE
+// const taylorUpdate = await db.creature.update({name: 'Mickie'}, {
+//     where: {
+//         name: 'Mickie'
+//     }
+// }) 
+// console.log(taylorUpdate)
+// DESTROY
+// const kablooiCreature = await db.creature.destroy ({
+//     where: {
+//         type: 'Harpia'
+//     }
+// })
+// console.log(kablooiCreature)
     } catch (err) {
         console.warn(err)
     }
 }
+
+creatureCrud()
