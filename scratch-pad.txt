@@ -1,0 +1,18 @@
+table: dinos
+-------------------
+id: INT
+name: TEXT
+type: TEXT
+
+
+table: creatures
+-------------------
+id: INT
+img_url: TEXT
+type: TEXT
+
+NOTE: generate models with a SINGULAR name (no s on the end)
+
+
+sequelize model:create --name dino --attributes id:integer,name:string,type:string
+sequelize model:create --name creature --attributes id:integer,img_url:string,type:string
