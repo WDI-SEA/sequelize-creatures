@@ -65,12 +65,12 @@ const creatureCRUD = async () => {
             // })
             // console.log(numRowsChanged)
         // D
-            const numRowsDeleted = await db.creature.destroy({
-                where: {
-                    type: 'Oscar'
-                }
-            })
-            console.log(numRowsDeleted)
+            // const numRowsDeleted = await db.creature.destroy({
+            //     where: {
+            //         type: 'Oscar'
+            //     }
+            // })
+            // console.log(numRowsDeleted)
     } catch(err) {
         console.warn(err)
     }
