@@ -1,0 +1,15 @@
+Table: Dinos
+----------
+id: INT
+name: TEXT
+type: TEXT
+
+sequelize model:create --name dino --attributes id:integer,name:string,type:string
+
+table: creatures
+----------------
+id: INT
+img_url: TEXT
+type: TEXT
+
+sequelize model:create --name creature --attributes id:integer,img_url:string,type:string
