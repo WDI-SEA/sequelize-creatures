@@ -2,7 +2,7 @@
 
 ---
 
-Your task is to create a `dinosuars` model and `creatures` model using [sequelize](https://sequelize.org/docs/v6/), and perform an example of each `CRUD` action on them.
+Your task is to create a `dinosaurs` model and `creatures` model using [sequelize](https://sequelize.org/docs/v6/), and perform an example of each `CRUD` action on them.
 
 ## Getting Started
 
