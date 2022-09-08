@@ -1,0 +1,31 @@
+table: users
+------------------------
+firstName: TEXT
+lastName: TEXT
+age: INT
+email: TEXT
+
+NOTE: generate models with a SINGULAR name (no s on the end)
+
+sequelize model:create --name user --attributes firstName:string,lastName:string,age:integer,email:string
+
+
+Dino model
+----------------
+id	integer
+name	text
+type	text
+
+NOTE: generate models with a SINGULAR name (no s on the end)
+
+sequelize model:create --name user --attributes firstName:string,lastName:string,age:integer,email:string
+sequelize model:create --name dino --attributes id:integer,name:string,type:string
+
+Creature model
+-------------------
+id	integer
+img_url	text
+type	text
+
+sequelize model:create --name user --attributes firstName:string,lastName:string,age:integer,email:string
+sequelize model:create --name creature --attributes id:integer,img_url:string,type:string
