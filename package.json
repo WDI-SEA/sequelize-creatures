@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "pg": "^8.8.0",
+    "sequelize": "^6.21.4"
+  },
+  "name": "sequelize-creatures",
+  "description": "---",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerchan33/sequelize-creatures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylerchan33/sequelize-creatures/issues"
+  },
+  "homepage": "https://github.com/tylerchan33/sequelize-creatures#readme"
+}
