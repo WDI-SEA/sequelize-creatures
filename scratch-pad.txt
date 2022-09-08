@@ -1,0 +1,13 @@
+dino model
+----------
+name: TEXT
+type: TEXT
+
+sequelize model:create --name dino --attributes name:string,type:string
+
+creature model
+--------------
+img_url: TEXT
+type: TEXT
+
+sequelize model:create --name creature --attributes img_url:string,type:string
