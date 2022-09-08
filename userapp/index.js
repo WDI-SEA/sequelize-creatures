@@ -1,5 +1,7 @@
 const db = require('./models')
 
+db.user.sequelizeMethod()
+
 const dinosaurCrud = async () => {
     try {
 
@@ -41,6 +43,20 @@ const dinosaurCrud = async () => {
     }
 }
 
-dinosaurCrud()
+// dinosaurCrud()
 
-const creatureCrud
+const creatureCrud = async () => {
+    try {
+ //CREATE
+const addCreature = await db.creature.create ({
+    name: 'Happy'
+    type: 'Harpia'
+}) 
+const newCreature = await db.creature.create ({
+    name: 'Taylor'
+    type: 'Minotaur'
+})
+    } catch (err) {
+        console.warn(err)
+    }
+}
