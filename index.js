@@ -35,15 +35,46 @@ const dinoCRUD = async () => {
         // })
         // console.log(numRowsChanged)
     // D
-        const numRowsDeleted = await db.dino.destroy({
-            where: {
-                name: 'T-Rex'
-            }
-        })
-        console.log(numRowsDeleted)
+        // const numRowsDeleted = await db.dino.destroy({
+        //     where: {
+        //         name: 'T-Rex'
+        //     }
+        // })
+        // console.log(numRowsDeleted)
     } catch(err) {
         console.warn(err)
     }
 }
 
-dinoCRUD()
+const creatureCRUD = async () => {
+    try {
+        // C
+            // const newCreature = await db.creature.create({
+            //     type:"Beaver",
+            //     img_url:'https://i.imgur.com/wYQQlBp.jpeg'
+            // })
+            // console.log(newCreature)
+        // R
+            // const allCreatures = await db.creature.findAll()
+            // console.log(allCreatures)
+        // U
+            // const numRowsChanged = await db.creature.update({ type:'Oscar'}, {
+            //     where: {
+            //         type: 'Sid'
+            //     }
+            // })
+            // console.log(numRowsChanged)
+        // D
+            const numRowsDeleted = await db.creature.destroy({
+                where: {
+                    type: 'Oscar'
+                }
+            })
+            console.log(numRowsDeleted)
+    } catch(err) {
+        console.warn(err)
+    }
+}
+
+// dinoCRUD()
+creatureCRUD()
