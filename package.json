@@ -1,0 +1,27 @@
+{
+  "name": "sequelize-creatures",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubeshauseli17/sequelize-creatures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kubeshauseli17/sequelize-creatures/issues"
+  },
+  "homepage": "https://github.com/kubeshauseli17/sequelize-creatures#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-sequelize": "^0.0.4",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.4"
+  }
+}
