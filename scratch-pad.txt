@@ -1,0 +1,7 @@
+NOTE: generate models with a SINGULAR name (no s on the end)
+
+sequelize model:create --name dino --attributes name:string,type:string
+
+sequelize model:create --name creature --attributes type:string,img_url:string
+
+sequelize db:migrate
