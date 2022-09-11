@@ -1,0 +1,1 @@
+sequelize model:create --name creature --attributes id:integer,img_url:text,type:text
