@@ -15,28 +15,56 @@ async function createDino() {
         img_url: 'https://s.abcnews.com/images/US/new-dinosaur-02-ht-jef-210811_1628710886267_hpEmbed_17x12_992.jpg',
         type: 'dino-two',
       })
-      const oneCreatures = await db. creature.findone({
+
+      const oneCreature = await db. creature.findone({
         where:{
             type: 'dino-two'
         }
      })
-      console.log('oneCreatures')
+      //console.log('oneCreature')
+
+      const newDino = await db. dino.findone({
+        where:{
+            name: 'nimo'
+        }
+     })
+      //console.log('newDino')
+
 
       ///update
 
-      const numRowsChanged = await db.user.update({ lastName: 'Taco' }, {
+      const numDinosChanged = await db.dino.update({name: 'dinno' }, {
         where: {
-          firstName: 'Brian'
+          name: 'nimo'
         }
       })
-      console.log(numRowsChanged)
+
+      //console.log(numDinosChanged)
+
+      const numCreaturesChanged = await db.creature.update({type: 'dino-three' }, {
+        where: {
+          type: 'dino-two'
+        }
+      })
+
+      //console.log(numCreaturesChanged)
+
       ///delete
-      const numRowsDeleted = await db.user.destroy({
+      const numDinosDeleted = await db.dino.destroy({
         where: { 
-          firstName: 'Brian' 
+          name: 'nimo' 
         }
       })
-      console.log(numRowsDeleted)
+      //console.log(numDinosDeleted)
+
+      const numCreaturesDeleted = await db.creature.destroy({
+        where: { 
+          type: 'dino-two' 
+        }
+      })
+      //console.log(numCreaturesDeleted)
+      
+
       //console.log(newDino)
       //} catch (err) {
      // console.log(err)
