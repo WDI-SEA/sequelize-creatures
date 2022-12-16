@@ -87,3 +87,68 @@ const db = require('./models')
 //     // do something when done deleting
 //       process.exit()
 //   });
+
+
+// ==========CLASS REVIEW =========//
+// const testFunc = async() => {
+//     console.log('good morning developers', db)
+// }
+
+const create1 = async() => {
+    const createdDino = await db.dino.create({
+        name:'littlefoot',
+        type: 'apatasaurus'
+    })
+    console.log(createdDino)
+    const createdCreature = await db.creatures.create({
+        img_url: 'http://placekitten.com', 
+        type:"mammoth"
+    })
+    console.log(createdCreature)
+}
+
+create1()
+
+const read = async () => {
+    const foundDino = await db.dino.findOne({
+        where: {
+            name: 'littlefoot'
+        }
+    })
+    console.log(foundDino)
+    const foundCreature = await db.creatures.findOne({
+        where: {
+            type: "mammoth"
+        }
+    })
+    console.log(foundCreature)
+}
+read()
+
+const update = async() => {
+    const updateDino = await db.dino.update(
+        {name:"barney", type: "purple dinosaur"}, 
+    {
+        where: {
+            name: 'littlefoot'
+        }
+    })
+    console.log(updateDino)
+    const updatedCreature = await db.creatures.update(
+        {type: 'sloth'}, 
+        {
+        where: {
+            type: 'mammoth'
+        }
+        }
+    )
+    console.log(updatedCreature)
+}
+update()
+// const destroy = async() => {
+//     await db.dino.destroy({
+//         where: {
+//             id: 1
+//         }
+//     })
+// }
