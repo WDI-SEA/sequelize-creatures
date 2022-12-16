@@ -1,0 +1,23 @@
+SQL Table: dinos
+
+id: INT
+name: VARCHAR(255)
+type: VARCHAR(255)
+
+// anatomy of the model create command //
+sequelize model:create --name (name of the table singular) --attributes colName:dataType,colName:dataType
+
+sequelize model:create --name dino --attributes id:integer,name:string,type:string
+
+
+
+SQL Table: creatures
+
+id: INT
+img_url: VARCHAR(255)
+type: VARCHAR(255)
+
+// anatomy of the model create command //
+sequelize model:create --name (name of the table singular) --attributes colName:dataType,colName:dataType
+
+sequelize model:create --name creature --attributes id:integer,img_url:string,type:string
