@@ -1,76 +1,82 @@
-const db = require("./models");
+const Dino = require("./Dino");
 
-/**
- * FIND OR CREATE
- */
-async function findOrCreateDino(nameInput, typeInput) {
-  try {
-    let foundDino = await db.dino.findOrCreate({
-      where: {
-        name: nameInput,
-        type: typeInput,
-      },
-    });
-    console.log(foundDino);
-  } catch (error) {
-    console.error(error.message);
-  }
-}
+let dino = new Dino();
 
-// findOrCreateDino("Jayosaurus", "Thickboi");
+dino.deleteDino(6);
 
-/**
- * GET ALL DINOS
- */
+dino.getAllDinos();
 
-async function getAllDinos() {
-  try {
-    const allDinos = await db.dino.findAll();
-    console.log(allDinos);
-  } catch (error) {
-    console.error(error.message);
-  }
-}
-// getAllDinos();
+// /**
+//  * FIND OR CREATE
+//  */
+// async function findOrCreateDino(nameInput, typeInput) {
+//   try {
+//     let foundDino = await db.dino.findOrCreate({
+//       where: {
+//         name: nameInput,
+//         type: typeInput,
+//       },
+//     });
+//     console.log(foundDino);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
 
-/**
- * UPDATE A DINO
- */
+// // findOrCreateDino("Jayosaurus", "Thickboi");
 
-async function updateDino(idInput, nameInput, typeInput) {
-  try {
-    const updatedDino = await db.dino.update(
-      { name: nameInput, type: typeInput },
-      {
-        where: {
-          id: idInput,
-        },
-      }
-    );
-    console.log(updatedDino);
-  } catch (error) {
-    console.error(error.message);
-  }
-}
+// /**
+//  * GET ALL DINOS
+//  */
 
-// updateDino(4, "Jayosaur", "Extra Thickboi");
+// async function getAllDinos() {
+//   try {
+//     const allDinos = await db.dino.findAll();
+//     console.log(allDinos);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
+// // getAllDinos();
 
-/**
- * DELETE A DINO
- */
+// /**
+//  * UPDATE A DINO
+//  */
 
-async function deleteDino(idInput) {
-  try {
-    let dinoDeleted = await db.dino.destroy({
-      where: {
-        id: idInput,
-      },
-    });
-    console.log(dinoDeleted);
-  } catch (error) {
-    console.error(error.message);
-  }
-}
+// async function updateDino(idInput, nameInput, typeInput) {
+//   try {
+//     const updatedDino = await db.dino.update(
+//       { name: nameInput, type: typeInput },
+//       {
+//         where: {
+//           id: idInput,
+//         },
+//       }
+//     );
+//     console.log(updatedDino);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
+
+// // updateDino(4, "Jayosaur", "Extra Thickboi");
+
+// /**
+//  * DELETE A DINO
+//  */
+
+// async function deleteDino(idInput) {
+//   try {
+//     let dinoDeleted = await db.dino.destroy({
+//       where: {
+//         id: idInput,
+//       },
+//     });
+//     console.log(dinoDeleted);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
 
 // deleteDino(5);
 
