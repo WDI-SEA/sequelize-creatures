@@ -1,0 +1,12 @@
+sql table: Dino model
+
+dinoId: INT
+dinoName: VARCHAR(255)
+Dinotype: VARCHAR(255)
+
+                                                        
+sequelize model:create --name dinop2 --attributes dinoName:string,dinoType:string
+
+
+
+sequelize model:create --name creaturep2 --attributes img_url:string,creatureType:string
