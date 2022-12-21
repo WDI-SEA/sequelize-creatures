@@ -1,0 +1,24 @@
+// ***** Don't forget "sequelize init" *****
+
+"sequelize model: create --name dino --attributes name:string,type:string"
+// name is singular, so sequelize will pluralize table
+
+"sequelize model: create --name creature --attributes img_url:string,type:string"
+
+// edit the config.json file
+// {
+  "development": {
+    "database": "dino_creature", 
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}  
+
+"sequelize db:create"
+"sequelize db:migrate"
+
+
+
+
+
+
