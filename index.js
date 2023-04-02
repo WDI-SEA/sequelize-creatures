@@ -23,46 +23,59 @@ const creatures = require('./models')
 // });
 
 
-// CREATE a dino
-Dino.create({
-    name: "T-Rex",
-    type: "Killer dinosaur",
-  })
-    .then((dino) => {
-      console.log(dino);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  
-  // READ a dinos
-  Dino.findOne({
-    where: { name: "T-Rex" },
-  }).then((foundUser) => {
-    console.log(foundUser);
-    process.exit();
-  });
-  
-  // UPDATE
-  Dino.update({
-      name: "T-Rex",
-    },{
-      where: {
-        type: "Killer dinosaur",
-      }}).then((numRowsChanged) => {
-    // Returns a value of how many rows were altered by this update
-    console.log(numRowsChanged);
-    process.exit();
-  });
-  
-  
-  // DELETE
-  Dino.destroy({
-      where: { name: 'T-Rex' }
-    }).then(numRowsDeleted=>{
-        console.log(numRowsDeleted)
-      // do something when done deleting
-        process.exit()
-    });
-  
-  
+const createDino = async() => {
+    try {
+        const dino = await db.dino.create({
+            name: 'Tyrannosaurus Rex',
+            type: 'carnivorous'
+        })
+        console.log(`ID is ${dino.id}`)
+    } catch (err) {
+        console.log(err)
+    }
+}
+createDino()
+
+const readDino = async() => {
+    try {
+        const dino = await db.dino.findOne({
+            where: { name: "Tyrannosaurus Rex"}
+        })
+            if (dino) {
+                console.log(`found ${dino.id}`)
+            } else {
+                console.log(`not found ${id}`)
+            }
+        } catch (error) {
+            console.log(error)
+    } 
+    }
+readDino()
+
+const updateDino = async() => {
+    try {
+       const numRowsChanged = await db.dino.update({
+        name: 'Tyrannosaurus Rex',
+       }, {
+        where: {
+            type:'carnivorous'
+        }
+       })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+updateDino()
+
+const deleteDino = async () => {
+    try {
+      const numRowDestroyed = await db.dino.destroy({
+        where: {
+          type: 'carnivorous',
+        },
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+deleteDino()
