@@ -1,13 +1,5 @@
 const db = require('./models')
 
-// CREATE
-
-// READ
-
-// UPDATE
-
-// DESTROY
-
 // create a new dino and a new creature
 const critterCreate = async () => {
     try {
@@ -20,8 +12,8 @@ const critterCreate = async () => {
         
         // create a new creature
         const newCreature = await db.creature.create({
-            img_url: 'https://assets.vg247.com/current//2018/01/monster_hunter_world_kirin_2.jpg',
-            type: 'Kirin'
+            img_url: 'https://d1lss44hh2trtw.cloudfront.net/assets/editorial/2020/02/rajang-weakness-monster-hunter-world.jpg',
+            type: 'Rajang'
         })
         console.log(`new creature: ${newCreature.type}`)
         
@@ -32,8 +24,17 @@ const critterCreate = async () => {
 }
 critterCreate()
 
+// READ all dinos & all creatures
 const critterRead = async () => {
     try {
+        const allDinos = await db.creature.findAll()
+        allDinos.forEach(dino => {
+            console.log(`Dino name read as: ${dino.name}`)
+        })
+        const allCreatures = await db.creature.findAll()
+        allCreatures.forEach(creature => {
+            console.log(`Critter type read as: ${creature.type}`)
+        })
         
     }
     catch (err) {
@@ -42,9 +43,20 @@ const critterRead = async () => {
 }
 // critterRead()
 
+
+// UPDATE dino name & creature type
 const critterUpdate = async () => {
     try {
-        
+        const changeDinoName = await db.creature.update({ name: 'Gabriel'}, {
+            where: {
+                name: 'Gabe'
+            }
+        })
+        const changeCreatureType = await db.creature.update({ type: 'Furious Rajang' }, {
+            where: {
+                type: 'Rajang'
+            }
+        })
     }
     catch (err) {
         console.log(err)
@@ -52,8 +64,20 @@ const critterUpdate = async () => {
 }
 // critterUpdate()
 
+
+// DESTROY a specified dino & a specified creature
 const critterDestroy = async () => {
     try {
+        const numDinosDestroyed = await db.dino.destroy({
+            where: {
+                name: 'Gabriel'
+            }
+        })
+        const numCreaturesDestroyed = await db.creature.destroy({
+            where: {
+                type: 'Furious Rajang'
+            }
+        })
         
     }
     catch (err) {
