@@ -17,6 +17,9 @@ Your task is to create a `dinosuars` model and `creatures` model using [sequeliz
 
 You will need to create two models: one for `dinos` and one for `creatures`:
 
+sequelize model:create --name dino --attributes  name:text,type:text
+
+sequelize model:create --name creature --attributes img_url:text,type:text
 ### Dino model
 
 | column name | type |
