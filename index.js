@@ -24,17 +24,19 @@ const critterCreate = async () => {
 }
 critterCreate()
 
-// READ all dinos & all creatures
+// READ all dinos & a specific creature
 const critterRead = async () => {
     try {
         const allDinos = await db.creature.findAll()
         allDinos.forEach(dino => {
             console.log(`Dino name read as: ${dino.name}`)
         })
-        const allCreatures = await db.creature.findAll()
-        allCreatures.forEach(creature => {
-            console.log(`Critter type read as: ${creature.type}`)
+        const oneCreature = await db.creature.findOne({
+            where: {
+                type: 'Rajang'
+            }
         })
+        console.log('Rajang: ', oneCreature)
         
     }
     catch (err) {
@@ -68,12 +70,12 @@ const critterUpdate = async () => {
 // DESTROY a specified dino & a specified creature
 const critterDestroy = async () => {
     try {
-        const numDinosDestroyed = await db.dino.destroy({
+        await db.dino.destroy({
             where: {
                 name: 'Gabriel'
             }
         })
-        const numCreaturesDestroyed = await db.creature.destroy({
+        await db.creature.destroy({
             where: {
                 type: 'Furious Rajang'
             }
