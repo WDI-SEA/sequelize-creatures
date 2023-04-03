@@ -93,18 +93,74 @@ console.log(newCreature)
 //     }
 // }
 // findOrCreateDino()
-async function findOrCreateDino(){
+// async function findOrCreateDino(){
+//     try{
+//         const [dinosaur, create] = await db.dinosaur.findOrCreate({
+//             where: {
+//                 name: 'Kevin',
+//             },
+//             defaults: {type: 'T-rex'}
+//         })
+//         console.log(`${dinosaur.name} was ${created ? 'created' : 'found'}`)
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
+// findOrCreateDino()
+
+// async function createCreature() {
+//     try{
+//         const creatureCreate = await db.creature.create({
+//             name: 'Roach',
+//             type: 'Insect'
+//         },{name: 'Nat',type:'insect'})
+//         console.log(creatureCreate)
+//     } catch(err) {
+//         console.log(err)
+//     }
+// }
+// createCreature()
+
+
+async function findCreature() {
     try{
-        const [dinosaur, create] = await db.dinosaur.findOrCreate({
-            where: {
-                name: 'Kevin',
-            },
-            defaults: {type: 'T-rex'}
+        const findCreature = await db.creature.findAll()
+        findCreature.forEach(creature => {
+            console.log(creature.type)
         })
-        console.log(`${dinosaur.name} was ${created ? 'created' : 'found'}`)
     } catch (err) {
         console.log(err)
     }
 }
-findOrCreateDino()
+findCreature()
 
+// async function updateCreature() {
+//     try {
+//         const update= db.creature.update({
+//             type: 'Lepidoptera'
+//         }, {
+//         where: {
+//             name: 'butterfly'
+//         }
+//         })
+//         console.log(update)
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
+// updateCreature()
+
+// async function destroyCreature() {
+//     try {
+//         // const deletedRows = await db.creature.destroy({
+//         //     where: {name: 'Lizard'}
+//         // })
+//         creature.forEach(creature => {
+//             console.log(creature.name)
+//         })
+//     } catch (err) {
+//         console.log(err)
+//     }
+// }
+
+// destroyCreature()
