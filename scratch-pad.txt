@@ -1,0 +1,3 @@
+sequelize model:create --name user --attributes firstName:string,lastName:string,age:integer,email:stringop
+sequelize model:create --name dinos --attributes name:text,type:text
+sequelize model:create --name creatures --attributes img_url:text,type:text
