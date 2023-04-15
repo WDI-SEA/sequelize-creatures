@@ -13,7 +13,11 @@ Your task is to create a `dinosuars` model and `creatures` model using [sequeliz
 * touch an entry point `.js` file
 * [Set up](https://gasei.gitbook.io/sei/05-node-express/express-sequelize/03setup) this project to use sequelize
 
-## Models
+
+sequelize model:create --name dino --attributes  name:text,type:text
+sequelize model:create --name creature --attributes  img_url:text,type:text
+
+
 
 You will need to create two models: one for `dinos` and one for `creatures`:
 
